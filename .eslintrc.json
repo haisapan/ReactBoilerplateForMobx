@@ -1,0 +1,39 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true,
+            "js": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "import",
+        "node",
+        "promise",
+        "standard",
+        "react"
+    ],
+    "globals": {
+        "document": false,
+        "navigator": false,
+        "window": false
+    },
+
+    "rules": {
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "error",
+        "no-unreachable": "error",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "valid-typeof": "warn"
+    }
+}

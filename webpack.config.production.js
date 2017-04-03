@@ -73,7 +73,7 @@ module.exports = {
         new ExtractTextPlugin("assets/styles.css"),
         new HtmlWebpackPlugin({
             hash: false,
-            template: './index.hbs'
+            template: './index.html'
         })
     ],
 };

@@ -55,7 +55,7 @@ module.exports = {
     plugins: [
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new HtmlWebpackPlugin({ hash: false, template: "./index.hbs" }),
+        new HtmlWebpackPlugin({ hash: false, template: "./index.html" }),
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb/),
         new webpack.LoaderOptionsPlugin({
             test: /\.scss$/,
