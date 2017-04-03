@@ -10,7 +10,8 @@ import TopBar from './TopBar'
 export default class App extends Component {
 	constructor(props) {
 		super(props)
-		this.store = this.props.store
+		this.store = this.props.store;
+		var tesy=null;
 	}
 	componentDidMount() {
 		this.authenticate()

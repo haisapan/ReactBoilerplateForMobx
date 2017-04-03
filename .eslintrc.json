@@ -16,15 +16,15 @@
     },
     "plugins": [
         "import",
-        "node",
-        "promise",
-        "standard",
+        // "node",
+        // "promise",
+        // "standard",
         "react"
     ],
     "globals": {
-        "document": false,
-        "navigator": false,
-        "window": false
+        // "document": false,
+        // "navigator": false,
+        // "window": false
     },
 
     "rules": {

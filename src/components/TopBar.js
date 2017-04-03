@@ -10,7 +10,7 @@ export default class TopBar extends Component {
 
 	constructor(props) {
 		super(props);
-		this.store = this.props.store
+		this.store = this.props.store;
 	}
 
 	authenticate(e) {
@@ -26,7 +26,7 @@ export default class TopBar extends Component {
 				<TopNav />
 				<Button onClick={this.authenticate.bind(this)} title={authenticated ? 'Log out' : 'Sign in'}/>
 			</div>
-		)
+		);
 	}
 
 }
