@@ -1,21 +1,21 @@
-import React, { Component } from 'react'
-import { inject, observer } from 'mobx-react'
+import React, { Component } from 'react';
+import { inject, observer } from 'mobx-react';
 
 @inject("store") @observer
 export default class Home extends Component {
 
 	constructor(props) {
 		super(props);
-		this.store = this.props.store
+		this.store = this.props.store;
 	}
 
 	render() {
-		const store = this.store
+		const store = this.store;
 		return (
 			<div className="page home">
 				<header>
 					<div className="hero-unit">
-						<div className="react-logo"></div>
+						<div className="react-logo" />
 						<h1>React MobX React-Router 4 Boilerplate by Haisa</h1>
 					</div>
 					<div className="hero-subunit">
@@ -31,7 +31,7 @@ export default class Home extends Component {
 						<hr/>
 					</div>
 					<div className="boilerplate-item">
-						<div className="boilerplate-logo react"></div>
+						<div className="boilerplate-logo react" />
 						<div className="boilerplate-item-content">
 							<a href="https://facebook.github.io/react/" target="_blank"><h4>React</h4></a>
 							<small>UI Library</small>
@@ -39,7 +39,7 @@ export default class Home extends Component {
 						</div>
 					</div>
 					<div className="boilerplate-item">
-						<div className="boilerplate-logo mobx"></div>
+						<div className="boilerplate-logo mobx" />
 						<div className="boilerplate-item-content">
 							<a href="http://mobxjs.github.io/mobx/" target="_blank"><h4>MobX</h4></a>
 							<small>Reactive State Management</small>
@@ -47,7 +47,7 @@ export default class Home extends Component {
 						</div>
 					</div>
 					<div className="boilerplate-item">
-						<div className="boilerplate-logo reactrouter"></div>
+						<div className="boilerplate-logo reactrouter" />
 						<div className="boilerplate-item-content">
 							<a href="https://react-router.now.sh/" target="_blank"><h4>React Router 4</h4></a>
 							<small>Routing Library</small>
@@ -55,7 +55,7 @@ export default class Home extends Component {
 						</div>
 					</div>
 					<div className="boilerplate-item">
-						<div className="boilerplate-logo webpack"></div>
+						<div className="boilerplate-logo webpack" />
 						<div className="boilerplate-item-content">
 							<a href="http://webpack.github.io/" target="_blank"><h4>Webpack 2</h4></a>
 							<small>Module Bundler</small>
@@ -73,7 +73,7 @@ export default class Home extends Component {
 					</div>
 				</main>
 			</div>
-		)
+		);
 	}
 
 }

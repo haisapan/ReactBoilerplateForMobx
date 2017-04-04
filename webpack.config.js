@@ -18,7 +18,8 @@ module.exports = {
         publicPath: "/",
         filename: "app.[hash].js"
     },
-    devtool: "eval",
+    // devtool: "eval",
+    devtool: "eval-source-map",
     module: {
         loaders: [
             {
@@ -52,6 +53,7 @@ module.exports = {
             { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
         ]
     },
+
     plugins: [
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),

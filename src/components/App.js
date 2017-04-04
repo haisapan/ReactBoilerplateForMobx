@@ -1,28 +1,27 @@
-import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { Provider, observer } from 'mobx-react'
-import LazyRoute from 'lazy-route'
-import DevTools from 'mobx-react-devtools'
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Provider, observer } from 'mobx-react';
+import LazyRoute from 'lazy-route';
+import DevTools from 'mobx-react-devtools';
 
-import TopBar from './TopBar'
+import TopBar from './TopBar';
 
 @observer
 export default class App extends Component {
 	constructor(props) {
-		super(props)
+		super(props);
 		this.store = this.props.store;
-		var tesy=null;
 	}
 	componentDidMount() {
-		this.authenticate()
+		this.authenticate();
 		
 	}
 	authenticate(e) {
 		if (e) e.preventDefault();
-		this.props.store.authenticate()
+		this.props.store.authenticate();
 	}
 	render() {
-		const { authenticated, authenticating, timeToRefresh, refreshToken } = this.store
+		const { authenticated, authenticating, timeToRefresh, refreshToken } = this.store;
 		return (
 			<Router>
 				<Provider store={this.store}>
@@ -31,32 +30,32 @@ export default class App extends Component {
 						<TopBar />
 
 						<Route 
-						  exact
-						  path="/"
-						  render={(props) => <LazyRoute {...props} component={import('./Home')} />}
+							exact
+							path="/"
+							render={(props) => <LazyRoute {...props} component={import('./Home')} />}
 						/>
 						<Route 
-						  exact
-						  path="/posts"
-						  render={(props) => <LazyRoute {...props} component={import('./Subpage')} />}
+							exact
+							path="/posts"
+							render={(props) => <LazyRoute {...props} component={import('./Subpage')} />}
 						/>
 						<Route 
-						  exact
-						  path="/posts/:id"
-						  render={(props) => <LazyRoute {...props} component={import('./Subitem')} />}
+							exact
+							path="/posts/:id"
+							render={(props) => <LazyRoute {...props} component={import('./Subitem')} />}
 						/>
 						<Route 
-						  exact
-						  path="/login"
-						  render={(props) => <LazyRoute {...props} component={import('./Login')} />}
+							exact
+							path="/login"
+							render={(props) => <LazyRoute {...props} component={import('./Login')} />}
 						/>
 						{!!(timeToRefresh && timeToRefresh <= 4) && this.store.refreshToken()}
 					<footer>
-						Cobbled together by <a href="https://twitter.com/mhaagens" target="_blank">@mhaagens</a> | github: <a href="https://github.com/mhaagens" target="_blank">mhaagens</a>
+						Created by haisa
 					</footer>
 					</div>
 				</Provider>
 			</Router>
-		)
+		);
 	}
 }

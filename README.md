@@ -1,6 +1,6 @@
-# React MobX React-Router 4 Boilerplate
+# React MobX React-Router 4 Boilerplate by haisa
 
-### :tada: React, React-Router@next, MobX and Webpack 2.
+### :tada: React, React-Router4, MobX and Webpack 2.
 ## [Demo]()
 
 Just run `npm install` and `npm start`, then go to localhost:3000 to start developing.
@@ -13,7 +13,7 @@ If you've downloaded this boilerplate before remember to run `npm install` again
 
 #### Read this if you've been using an earlier version of this boilerplate
 
-* 01/31/17 - Upgraded to React Router 4 Beta
+* 01/31/17 - Upgraded to React Router 4 
 * 01/28/17 - Routes are now loaded through [Lazy-Route](https://github.com/mhaagens/lazy-route).
 
 ### Todo

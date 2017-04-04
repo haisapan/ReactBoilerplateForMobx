@@ -14,7 +14,11 @@ export default function Protected(Component) {
 			const {authenticated, authenticating} = this.store;
 			return (
 				<div className="authComponent">
-					{authenticated ? <Component {...this.props} /> : !authenticating && !authenticated ? <Redirect to={{pathname: '/login', state: { from: this.props.location }}}/> : null}
+					{authenticated ? 
+					<Component {...this.props} /> 
+					: !authenticating && !authenticated ? 
+					<Redirect to={{pathname: '/login', state: { from: this.props.location }}}/> 
+					: null}
 				</div>
 			);
 		}
