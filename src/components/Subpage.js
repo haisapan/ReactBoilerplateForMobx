@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
-import { inject, observer } from 'mobx-react'
-import { Match, Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { inject, observer } from 'mobx-react';
+import { Match, Link } from 'react-router-dom';
 
-import Protected from './Protected'
-import DataWrapper from './DataWrapper'
+import Protected from './Protected';
+import DataWrapper from './DataWrapper';
 
 @Protected @DataWrapper @inject("store") @observer
 export default class Subpage extends Component {
 	constructor(props) {
-		super(props)
-		this.store = this.props.store
+		super(props);
+		this.store = this.props.store;
 	}
 	render() {
 		return (
@@ -19,15 +19,15 @@ export default class Subpage extends Component {
 				<hr />
 				<ul>
 					{this.store.items && this.store.items.length ? this.store.items.slice(6,12).map(post => {
-						return <li key={post.id}>
+						return (<li key={post.id}>
 						<Link to={`${this.props.match.path}/${post.id}`}>
 						<h1>{post.title}</h1>
 						</Link>
 						<p>{post.body.substring(0, 120)}</p>
-						</li>
+						</li>);
 					}) : 'Loading...'}
 				</ul>
 			</div>
-		)
+		);
 	}
 }
